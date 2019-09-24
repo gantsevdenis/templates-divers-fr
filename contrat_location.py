@@ -1,4 +1,5 @@
-output_filename = "/tmp/contrat_location"
+#!/bin/env python3.7
+output_filename = "/home/denis/Desktop/contrat_location"
 ######################################
 bailleur = ""
 bailleur_addresse = ""
@@ -216,3 +217,6 @@ Pour l'execution du présent bail, les parties font élection de domicile
 - Le bailleur, et son domicile {bailleur_addresse}
 - Le locataire dans les locaux présentement loués
 """
+
+with open(output_filename, "w") as f:
+    f.write(contrat_txt.format(**locals()))
